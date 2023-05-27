@@ -49,7 +49,7 @@ echo "Total Processing Time |"
 tput cup 1 86
 # Write Total Processing Time
 echo "Average waiting Time |"
-# Move cursor to row 1, column 106
+# Move cursor to row 1, column 109
 tput cup 1 109
 # Write Total Processing Time
 echo "Average Processing Time"
@@ -129,11 +129,12 @@ do
     #result=$(echo "scale=2; $dividend / $divisor" | bc -l)
     avg_waiting_time=$(echo "scale=2; $total_waiting_time / $current_process" | bc -l)
     avg_process_time=$(echo "scale=2; $total_processing_time / $current_process" | bc -l)
+    # Move cursor to row 3, column 86
     tput cup 3 86
     # Write Waiting time
     echo $avg_waiting_time
 
-    # Move cursor to row 1, column 62
+    # Move cursor to row 3, column 109
     tput cup 3 109
     echo $avg_process_time
 
